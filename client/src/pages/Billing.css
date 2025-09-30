@@ -1,0 +1,95 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    background: url('../assets/billing.jpg');
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional: keeps bg fixed while scrolling */
+    background-position: center;  /* keep it centered */
+    color: #393121;
+}
+
+.billing-container{
+    width: 70%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.billing-nav{
+    /* border: #393121 solid 2px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20%;
+    padding-top: 3%;
+}
+
+.billing-details{
+    /* border: #393121 solid 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20%;
+    gap: 20px;
+    padding-top: 4%;
+}
+
+.billing-nav h1{
+    font-size: 100px;
+}
+
+.billing-details h2{
+    font-size: 60px;
+}
+
+.order-item{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.dish-name{
+    margin-right: 20px;
+}
+
+.total-price h3{
+    padding-top: 70px;
+    font-size: 43px;
+}
+
+.amt{
+    font-size: 30px;
+}
+
+/* .billing-actions{
+    border: #393121 solid 2px; 
+} */
+
+.btns{
+    margin-top: 130%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    /* border: #393121 solid 2px; */
+}
+
+.cancel-btn{
+    width: 150px;
+    min-height: 60px;
+    background-color: rgba(0, 0, 0, 0.522);
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.proceed-btn{
+    width: 200px;
+    min-height: 60px;
+    cursor: pointer;
+}

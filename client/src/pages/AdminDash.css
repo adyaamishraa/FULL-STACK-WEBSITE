@@ -1,0 +1,232 @@
+.admindash-container{
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    color: #F0f0f0;
+    background-image: url('../assets/admindashbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional: keeps bg fixed while scrolling */
+    background-position: center;  /* keep it centered */
+}
+
+.admindash-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+.log-out{
+  background: transparent;
+  border: 1px solid #ccc;
+  margin-top: 0;
+  padding: 17px 27px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-heading{
+  margin: 0;
+}
+
+.heading{
+  font-size: 40px;
+  font-family: "Arizonia", cursive;
+  height: 120px;  
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;   /* ✅ vertical centering without stretching */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.search {
+  position: relative;
+  /* display: inline-block; */
+  width: 250px; /* adjust width as needed */
+  /* display: flex; */
+}
+
+.search-input {
+  width: 100% ;
+  height: 40px; 
+  padding: 8px 12px 8px 35px !important; /* left padding so text doesn't overlap icon */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;  /* distance from input's left side */
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: gray;
+  pointer-events: none; /* so clicks go to input, not icon */
+  /* align-items: center; */
+}
+
+.date-bar{
+    width: 250px;
+    height: 40px; 
+    padding: 8px 12px ; /* left padding so text doesn't overlap icon */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+.search-date{
+   display: flex;
+   flex-direction: row;
+   align-items: center; 
+   gap: 20px;  
+}
+
+.table-container {
+  width: 90%;       /* shrink width */
+  margin: 0 auto;   /* center with margins */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+}
+
+.table td, .table th {
+  padding: 6px 10px;        /* small padding */
+  vertical-align: middle !important;   /* keeps content vertically centered */
+  text-align: center;       /* keeps content horizontally centered */
+  height: 45px;
+  
+}
+
+.status-btn {
+  margin-top: 0 !important;
+  padding: 2px 5px !important;
+  height: 50px !important;
+  width: 130px !important;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  line-height: 1.2;
+  display: inline-flex;     /* use flex for perfect centering */
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  color: #F0f0f0;
+
+}
+
+.status-btn.pending {
+  background-color: orange;
+}
+
+/* when status is resolved */
+.status-btn.resolved {
+  background-color: green;
+}
+
+.resolve-overlay{
+  height: 100vh;
+  position: fixed; /*relative to viewport/wholescreen visible*/
+  top: 0;
+  left: 0;
+  display: flex;        /* flexbox for centering */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3); /* dim background */
+  z-index: 1000;        /* make sure it’s above navbar */
+  width: 100vw;
+}
+
+.resolve-container{
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  font-family: 'soria' ;
+}
+
+
+
+.text{
+  font-size: 20px;
+  font-family: "Arizonia", cursive;
+}
+
+.cancelbtn{
+  background: rgb(249, 8, 4);
+  color: white;
+  /* padding: 6px 20px; */
+  margin-top: 20px;
+  margin-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: "Arizonia", cursive;
+}
+
+.cancelbtn:hover{
+  transform: scale(1.1);
+}
+
+.acceptbtn{
+  background: green;
+  color: white;
+  /* padding: 6px 20px; */
+  margin-top: 20px;
+  margin-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: "Arizonia", cursive;
+}
+
+.acceptbtn:hover{
+  transform: scale(1.1);
+}
+
+.confirmationDiv{
+  padding-left: 7.1%;
+}
+
+.cancelbtn, .acceptbtn {
+  height: auto;
+  width: auto;
+  padding: 6px 20px !important;  /* set your desired size */
+}
+
+.textDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
