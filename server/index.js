@@ -1,8 +1,12 @@
+
 console.log("🚀 Server file started...");
 
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
+
+
+require('dotenv').config();
+
 const pool = require('./db');
 const contact = require('./routes/contact');
 const adminpg = require('./routes/adminpg');
@@ -14,15 +18,15 @@ const menu = require('./routes/menu')
 
 const app = express(); //usage of express
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 
-dotenv.config(); // load .env first
+
 
 
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL, // your frontend URL
+    origin: "*", // your frontend URL
     methods: ['GET','POST','PUT','DELETE'],
     credentials: true,               // allow cookies
 }));
@@ -286,6 +290,6 @@ app.use('/menu', menu);
 
 
 app.listen(PORT, () => {
-    console.log(`✅ Server is running on http://localhost:${PORT}`);
+    console.log(`✅ Server is running on port ${PORT}`);
 })
 
